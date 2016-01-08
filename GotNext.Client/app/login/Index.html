@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Title</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/site.css" rel="stylesheet" />
+
+    <script src="Scripts/modernizr-2.8.3.js"></script>
+</head>
+<body>
+<div class="container body-content" ng-controller="loginController as vm">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Login</h2>
+            <section>
+                <form>
+                    <div class="form-group">
+                        <label class="control-label" for="username">Username: </label>
+                        <div>
+                            <input type="email" class="form-control" id="username" ng-model="vm.loginUsername" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="password">Password: </label>
+                        <div>
+                            <input type="password" class="form-control" id="loginPassword" ng-model="vm.loginPassword" />
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" ng-click="vm.login()">Login</button>
+                </form>
+            </section>
+        </div>
+        <div class="col-md-6">
+            <h2>Register</h2>
+            <section>
+                <form>
+                    <div class="form-group">
+                        <label class="control-label" for="email">Email: </label>
+                        <div>
+                            <input type="email" class="form-control" id="email" ng-model="vm.registerEmail" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="password">Password: </label>
+                        <div>
+                            <input type="password" class="form-control" id="password" ng-model="vm.registerPassword"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="confirmPassword">Confirm Password: </label>
+                        <div>
+                            <input type="password" class="form-control" id="confirmPassword" ng-model="vm.registerConfirmPassword"/>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" ng-click="vm.registerUser()">Register</button>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
+
+    <script src="../../Scripts/jquery/jquery-2.1.4.js"></script>
+
+    <script src="../../Scripts/bootstrap/bootstrap.js"></script>
+    <script src="../../Scripts/bootstrap/respond.js"></script>
+
+    <script src="../../Scripts/angular/angular.js"></script>
+    <script src="../../Scripts/angular/angular-sanitize.js"></script>
+    <script src="../../Scripts/angular/angular-cookies.js"></script>
+    <script src="../../Scripts/angular/angular-resource.js"></script>
+    <script src="../../Scripts/angular/angular-ui-router.js"></script>
+
+    <script src="../../app/app.module.js"></script>
+    <script src="../../app/app.core.module.js"></script>
+    <script src="../../app/app.domain.module.js"></script>
+    <script src="../../app/app.config.js"></script>
+    <script src="../../app/app.constants.js"></script>
+    <script src="../../app/app.routes.js"></script>
+    <script src="../../app/app.run.js"></script>
+    <script src="../../app/app.values.js"></script>
+                
+    <script src="../../app/blocks/blocks.module.js"></script>
+    <script src="../../app/dashboard/dashboard.module.js"></script>
+    <script src="../../app/example/example.module.js"></script>
+    <script src="../../app/layout/layout.module.js"></script>
+    <script src="../../app/login/login.module.js"></script>
+    <script src="../../app/services/services.module.js"></script>
+    <script src="../../app/sitesettings/sitesettings.module.js"></script>
+    <script src="../../app/widgets/widgets.module.js"></script>
+            
+    <script src="../../app/blocks/apiendpoint.config.js"></script>
+    <script src="../../app/blocks/apiendpoint.provider.js"></script>
+    <script src="../../app/blocks/logDecorator.config.js"></script>
+    <script src="../../app/dashboard/dashboard.routes.js"></script>
+    <script src="../../app/example/example.controller.js"></script>
+    <script src="../../app/example/example.model.js"></script>
+    <script src="../../app/example/example.routes.js"></script>
+    <script src="../../app/layout/navigation.controller.js"></script>
+    <script src="../../app/login/login.controller.js"></script>
+    <script src="../../app/login/login.routes.js"></script>
+    <script src="../../app/login/profile.js"></script>
+    <script src="../../app/services/context.service.js"></script>
+    <script src="../../app/services/currentUser.service.js"></script>
+    <script src="../../app/services/sitesettings.service.js"></script>
+    <script src="../../app/services/user.service.js"></script>
+    <script src="../../app/services/userAccount.service.js"></script>
+    <script src="../../app/sitesettings/sitesettings.controller.js"></script>
+    <script src="../../app/users/user.model.js"></script>
+    <script src="../../app/widgets/slugcheck.directive.js"></script>
+</body>
+</html>
