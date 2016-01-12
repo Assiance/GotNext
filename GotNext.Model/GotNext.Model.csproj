@@ -84,6 +84,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\API\CourtAPI.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\API\ExampleAPI.cs" />
     <Compile Include="Models\Domain\Account\AddExternalLoginModel.cs" />
@@ -93,6 +94,7 @@
     <Compile Include="Models\Domain\Account\SetPasswordModel.cs" />
     <Compile Include="Models\Domain\Authentication\Registration.cs" />
     <Compile Include="Models\Domain\Authentication\RegistrationResult.cs" />
+    <Compile Include="Models\Domain\Court.cs" />
     <Compile Include="Models\Domain\Example.cs" />
     <Compile Include="Models\Domain\LogAction.cs" />
     <Compile Include="Models\Domain\User.cs" />

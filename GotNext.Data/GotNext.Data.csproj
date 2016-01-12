@@ -104,13 +104,16 @@
     <Compile Include="Contexts\ApplicationDbContext.cs" />
     <Compile Include="Contexts\DataContext.cs" />
     <Compile Include="Contexts\IDataContext.cs" />
+    <Compile Include="Entities\CourtEntity.cs" />
     <Compile Include="Entities\ExampleEntity.cs" />
     <Compile Include="Entities\LogActionEntity.cs" />
     <Compile Include="Entities\User\ApplicationUserEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registries\DataRegistry.cs" />
     <Compile Include="Repositories\ApplicationUserRepository.cs" />
+    <Compile Include="Repositories\CourtRepository.cs" />
     <Compile Include="Repositories\ExampleRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ICourtRepository.cs" />
     <Compile Include="Repositories\Interfaces\ILogActionRepository.cs" />
     <Compile Include="Repositories\Interfaces\IExampleRepository.cs" />
     <Compile Include="Repositories\LogActionRepository.cs" />

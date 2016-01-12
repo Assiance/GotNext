@@ -134,6 +134,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Managers\ApplicationUserManager.cs" />
+    <Compile Include="Managers\CourtManager.cs" />
+    <Compile Include="Managers\Interfaces\ICourtManager.cs" />
     <Compile Include="Managers\Interfaces\IMemberManager.cs" />
     <Compile Include="Managers\Interfaces\ILogManager.cs" />
     <Compile Include="Managers\LogManager.cs" />
