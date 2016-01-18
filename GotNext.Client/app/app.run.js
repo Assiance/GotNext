@@ -6,12 +6,18 @@
     run.$inject = [
         '$rootScope',
         '$cookies',
-        'currentUser'
+        'currentUserService',
+        '$state'
     ];
-    function run($rootScope, $cookies, currentUser) {
+    function run($rootScope, $cookies, currentUserService, $state) {
+        $rootScope.$on('$stateChangeStart', function (e, toState) {
+            var profile = currentUserService.getProfile();
+            if (profile.isLoggedIn === false && toState.name !== "login") {
+                e.preventDefault();
+                $state.go('login');
+            }
+        });
         $rootScope.$on('$routeChangeError', function () {
         });
-        currentUser.userId = $cookies.userId; // Look into what this is doing
     }
 })();
-//# sourceMappingURL=app.run.js.map

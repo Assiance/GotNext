@@ -5,6 +5,9 @@ module app.services {
     //Service Model
     export interface IUserAccountDefinition {
         Username: string;
+        FirstName: string;
+        LastName: string;
+        DateOfBirth: string;
         Email: string;
         Password: string;
         ConfirmPassword: string;
@@ -16,6 +19,9 @@ module app.services {
 
     export class UserAccount implements IUserAccountDefinition {
         public Username: string;
+        public FirstName: string;
+        public LastName: string;
+        public DateOfBirth: string;
         public Grant_Type: string;
         public Email: string;
         public Password: string;

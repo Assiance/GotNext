@@ -1,4 +1,4 @@
-﻿using StructureMap.Configuration.DSL;
+﻿using StructureMap;
 using StructureMap.Graph;
 
 namespace GotNext.Web.Infrastructure.StructureMap.Registries

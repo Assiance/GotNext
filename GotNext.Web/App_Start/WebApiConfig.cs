@@ -28,6 +28,7 @@ namespace GotNext.Web
             );
 
             config.MessageHandlers.Add(new EnforceHttpsHandler());
+            config.Filters.Add(new AuthorizeAttribute());
         }
     }
 }

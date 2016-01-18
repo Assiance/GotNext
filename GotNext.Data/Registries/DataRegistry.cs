@@ -1,5 +1,4 @@
 ﻿using System.Data.Entity;
-using System.Security.Cryptography.X509Certificates;
 using GotNext.Data.Contexts;
 using GotNext.Data.Entities.User;
 using GotNext.Data.Repositories;
@@ -8,9 +7,8 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using StructureMap.Configuration.DSL;
+using StructureMap;
 using StructureMap.Graph;
-using StructureMap.Pipeline;
 
 namespace GotNext.Data.Registries
 {

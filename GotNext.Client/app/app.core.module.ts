@@ -11,6 +11,7 @@
         /*
          *  3rd Party Modules
          */
-        'ui.router'
+        'ui.router',
+        'LocalStorageModule'
     ]);
 })();

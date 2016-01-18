@@ -1,8 +1,7 @@
 ﻿using System.Linq;
 using System.Reflection;
 using GotNext.Core;
-using StructureMap.Configuration.DSL;
-using StructureMap.Graph;
+using StructureMap;
 
 namespace GotNext.Web.Infrastructure.StructureMap.Registries
 {

@@ -5,6 +5,11 @@
         .module('app')
         .config(config);
 
-    config.$inject = [];
-    function config() : void {}
+    config.$inject = [
+        '$httpProvider'
+    ];
+
+    function config($httpProvider: ng.IHttpProvider): void {
+        $httpProvider.interceptors.push('authInterceptorService');
+    }
 })();

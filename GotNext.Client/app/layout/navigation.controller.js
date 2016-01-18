@@ -21,4 +21,3 @@ var app;
             .controller('navigationController', NavigationController);
     })(layout = app.layout || (app.layout = {}));
 })(app || (app = {}));
-//# sourceMappingURL=navigation.controller.js.map

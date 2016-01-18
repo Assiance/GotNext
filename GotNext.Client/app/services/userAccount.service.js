@@ -46,4 +46,3 @@ var app;
             .factory('userAccountService', factory);
     })(services = app.services || (app.services = {}));
 })(app || (app = {}));
-//# sourceMappingURL=userAccount.service.js.map

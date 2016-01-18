@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Web;
 using Microsoft.Owin;
-using Microsoft.Owin.Security;
-using StructureMap.Configuration.DSL;
+using StructureMap;
 using StructureMap.Graph;
 
 namespace GotNext.Web.Infrastructure.StructureMap.Registries

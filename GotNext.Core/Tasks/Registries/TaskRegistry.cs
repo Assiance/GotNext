@@ -1,7 +1,6 @@
 ﻿using System.Linq;
-using System.Reflection;
 using GotNext.Web.Infrastructure.Tasks;
-using StructureMap.Configuration.DSL;
+using StructureMap;
 
 namespace GotNext.Core.Tasks.Registries
 {

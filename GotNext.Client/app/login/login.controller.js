@@ -4,28 +4,26 @@ var app;
     (function (login) {
         'use strict';
         var LoginController = (function () {
-            function LoginController(appSettings, userAccountService, currentUserService, registerEmail, registerPassword, registerConfirmPassword, loginUsername, loginPassword, token, message) {
-                this.appSettings = appSettings;
-                this.userAccountService = userAccountService;
+            function LoginController(currentUserService, authService, location, registerEmail, registerPassword, registerConfirmPassword, registerFirstName, registerLastName, registerDob, loginUsername, loginPassword) {
                 this.currentUserService = currentUserService;
+                this.authService = authService;
+                this.location = location;
                 this.registerEmail = registerEmail;
                 this.registerPassword = registerPassword;
                 this.registerConfirmPassword = registerConfirmPassword;
+                this.registerFirstName = registerFirstName;
+                this.registerLastName = registerLastName;
+                this.registerDob = registerDob;
                 this.loginUsername = loginUsername;
                 this.loginPassword = loginPassword;
-                this.token = token;
-                this.message = message;
-                var vm = this;
             }
             LoginController.prototype.registerUser = function () {
                 var _this = this;
-                var registerer = new app.services.UserAccount();
-                registerer.Email = this.registerEmail;
-                registerer.Password = this.registerPassword;
-                registerer.ConfirmPassword = this.registerConfirmPassword;
-                this.userAccountService.registration.registerUser(registerer, function (data) {
+                var registerer = new app.domain.RegisterUser(this.registerFirstName, this.registerLastName, this.registerEmail, this.registerDob, this.registerPassword);
+                this.authService.register(registerer).then(function (data) {
                     _this.registerConfirmPassword = "";
-                    _this.message = "registration successful";
+                    _this.loginUsername = _this.registerEmail;
+                    _this.loginPassword = _this.registerPassword;
                     _this.login();
                 }, function (response) {
                     alert('Fail Reg');
@@ -33,21 +31,16 @@ var app;
             };
             LoginController.prototype.login = function () {
                 var _this = this;
-                var unloggedInUser = new app.services.UserAccount();
-                unloggedInUser.Username = this.loginUsername;
-                unloggedInUser.Email = this.loginUsername;
-                unloggedInUser.Password = this.loginPassword;
-                unloggedInUser.Grant_Type = "password";
-                this.userAccountService.login.loginUser(unloggedInUser, function (data) {
-                    _this.currentUserService.setProfile(_this.loginUsername, _this.token);
+                var unloggedInUser = new app.domain.LoginUser(this.loginUsername, this.loginPassword);
+                this.authService.login(unloggedInUser).then(function (data) {
+                    _this.location.path('/');
                 }, function (response) {
-                    alert("Fail Login");
                 });
             };
             LoginController.$inject = [
-                'appSettings',
-                'userAccountService',
-                'currentUserService'];
+                'currentUserService',
+                'authService',
+                '$location'];
             return LoginController;
         })();
         angular
@@ -55,4 +48,3 @@ var app;
             .controller('loginController', LoginController);
     })(login = app.login || (app.login = {}));
 })(app || (app = {}));
-//# sourceMappingURL=login.controller.js.map

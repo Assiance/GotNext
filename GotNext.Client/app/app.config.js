@@ -3,7 +3,10 @@
     angular
         .module('app')
         .config(config);
-    config.$inject = [];
-    function config() { }
+    config.$inject = [
+        '$httpProvider'
+    ];
+    function config($httpProvider) {
+        $httpProvider.interceptors.push('authInterceptorService');
+    }
 })();
-//# sourceMappingURL=app.config.js.map

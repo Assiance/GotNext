@@ -5,14 +5,15 @@ var app;
         'use strict';
         var UserService = (function () {
             function UserService($http) {
+                var _this = this;
                 this.$http = $http;
+                this.getById = function (userId) {
+                    return _this.$http.get('/api/users/' + userId)
+                        .then(function (response) {
+                        return response.data;
+                    });
+                };
             }
-            UserService.prototype.getById = function (userId) {
-                return this.$http.get('/api/users/' + userId)
-                    .then(function (response) {
-                    return response.data;
-                });
-            };
             UserService.$inject = ['$http'];
             return UserService;
         })();
@@ -21,4 +22,3 @@ var app;
             .service('userService', UserService);
     })(services = app.services || (app.services = {}));
 })(app || (app = {}));
-//# sourceMappingURL=user.service.js.map

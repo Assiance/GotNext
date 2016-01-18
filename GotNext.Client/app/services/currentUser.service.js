@@ -5,12 +5,18 @@ var app;
         'use strict';
         var CurrentUserService = (function () {
             function CurrentUserService(profile) {
+                var _this = this;
                 this.profile = profile;
+                this.resetProfile = function () {
+                    _this.profile.isLoggedIn = false;
+                    _this.profile.token = "";
+                    _this.profile.username = "";
+                };
             }
-            CurrentUserService.prototype.setProfile = function (username, token) {
+            CurrentUserService.prototype.setProfile = function (username, token, isLoggedIn) {
                 this.profile.username = username;
                 this.profile.token = token;
-                this.profile.isLoggedIn = true;
+                this.profile.isLoggedIn = isLoggedIn;
             };
             CurrentUserService.prototype.getProfile = function () {
                 return this.profile;
@@ -26,4 +32,3 @@ var app;
             .factory('currentUserService', factory);
     })(services = app.services || (app.services = {}));
 })(app || (app = {}));
-//# sourceMappingURL=currentUser.service.js.map

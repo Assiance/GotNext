@@ -11,6 +11,12 @@ namespace GotNext.Web.ViewModels.Account
     public class RegisterAccountRequest : IMapFrom<Registration>, IMapTo<Registration>
     {
         [Required]
+        public string FirstName { get; set; }
+
+        [Required]
+        public string LastName { get; set; }
+
+        [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
@@ -24,5 +30,9 @@ namespace GotNext.Web.ViewModels.Account
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [DataType(DataType.Date)]
+        public DateTime DateOfBirth { get; set; }
     }
 }

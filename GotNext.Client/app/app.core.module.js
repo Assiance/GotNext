@@ -10,7 +10,7 @@
         /*
          *  3rd Party Modules
          */
-        'ui.router'
+        'ui.router',
+        'LocalStorageModule'
     ]);
 })();
-//# sourceMappingURL=app.core.module.js.map

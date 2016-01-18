@@ -95,6 +95,7 @@
     <Compile Include="Models\Domain\Authentication\RegistrationResult.cs" />
     <Compile Include="Models\Domain\Example.cs" />
     <Compile Include="Models\Domain\LogAction.cs" />
+    <Compile Include="Models\Domain\Player.cs" />
     <Compile Include="Models\Domain\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

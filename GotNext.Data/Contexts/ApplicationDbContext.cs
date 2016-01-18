@@ -13,6 +13,7 @@ namespace GotNext.Data.Contexts
     {
         public DbSet<ExampleEntity> Examples { get; set; }
         public DbSet<LogActionEntity> Logs { get; set; }
+        public DbSet<PlayerEntity> Players { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

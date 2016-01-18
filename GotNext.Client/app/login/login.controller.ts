@@ -7,8 +7,6 @@ module app.login {
         registerConfirmPassword: string;
         loginUsername: string;
         loginPassword: string;
-        token: string;
-        message: string;
 
         registerUser: () => void;
         login: () => void;
@@ -16,30 +14,31 @@ module app.login {
 
     class LoginController implements ILoginViewModel {
         static $inject: string[] = [
-            'appSettings',
-            'userAccountService',
-            'currentUserService'];
-        constructor(public appSettings: constants.IAppSettings, public userAccountService: services.IUserAccountService, public currentUserService: services.ICurrentUserService,
+            'currentUserService',
+            'authService',
+            '$location'];
+        constructor(private currentUserService: services.ICurrentUserService, private authService: services.IAuthService, private location: ng.ILocationService,
             public registerEmail: string,
             public registerPassword: string,
             public registerConfirmPassword: string,
+            public registerFirstName: string,
+            public registerLastName: string,
+            public registerDob: string,
             public loginUsername: string,
-            public loginPassword: string,
-            public token: string,
-            public message: string) {
-
-            var vm = this;
+            public loginPassword: string) {
         }
 
         public registerUser(): void {
-            var registerer = new services.UserAccount();
-            registerer.Email = this.registerEmail;
-            registerer.Password = this.registerPassword;
-            registerer.ConfirmPassword = this.registerConfirmPassword;
+            var registerer = new domain.RegisterUser(this.registerFirstName,
+                this.registerLastName,
+                this.registerEmail,
+                this.registerDob,
+                this.registerPassword);
 
-            this.userAccountService.registration.registerUser(registerer, (data) => {
+            this.authService.register(registerer).then((data) => {
                 this.registerConfirmPassword = "";
-                this.message = "registration successful";
+                this.loginUsername = this.registerEmail;
+                this.loginPassword = this.registerPassword;
                 this.login();
             },
             (response) => {
@@ -47,19 +46,13 @@ module app.login {
             });
         }
 
-        login(): void {
-            var unloggedInUser = new services.UserAccount();
-            unloggedInUser.Username = this.loginUsername;
-            unloggedInUser.Email = this.loginUsername;
-            unloggedInUser.Password = this.loginPassword;
-            unloggedInUser.Grant_Type = "password";
+        public login(): void {
+            var unloggedInUser = new domain.LoginUser(this.loginUsername, this.loginPassword);
 
-
-            this.userAccountService.login.loginUser(unloggedInUser, (data) => {
-                this.currentUserService.setProfile(this.loginUsername, this.token);
+            this.authService.login(unloggedInUser).then((data) => {
+                this.location.path('/');
             },
             (response) => {
-                alert("Fail Login");
             });
         }
     }

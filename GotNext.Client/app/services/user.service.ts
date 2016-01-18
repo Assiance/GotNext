@@ -11,7 +11,7 @@
         constructor(private $http: ng.IHttpService) {
         }
 
-        getById(userId: string): ng.IPromise<domain.IUser> {
+        getById = (userId: string): ng.IPromise<domain.IUser> => {
             return this.$http.get('/api/users/' + userId)
                 .then((response: ng.IHttpPromiseCallbackArg<domain.IUser>): domain.IUser => {
                 return response.data;
