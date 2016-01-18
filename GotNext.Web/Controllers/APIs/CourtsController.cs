@@ -12,6 +12,7 @@ using AutoMapper.QueryableExtensions;
 using GotNext.Domain.Managers.Interfaces;
 using GotNext.Model.Models.API;
 using GotNext.Model.Models.Domain;
+using GotNext.Web.ViewModels;
 
 namespace GotNext.Web.Controllers.APIs
 {
@@ -76,14 +77,14 @@ namespace GotNext.Web.Controllers.APIs
         }
 
         [ResponseType(typeof(CourtAPi))]
-        public IHttpActionResult PostCourt(Court court)
+        public IHttpActionResult PostCourt(CreateCourtRequest request)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            court = _courtManager.CreateCourt(court);
+            var court = _courtManager.CreateCourt(Mapper.Map<Court>(request));
 
             var apiCourt = Mapper.Map<CourtAPi>(court);
 

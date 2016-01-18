@@ -95,6 +95,7 @@
     <Compile Include="Models\Domain\Authentication\Registration.cs" />
     <Compile Include="Models\Domain\Authentication\RegistrationResult.cs" />
     <Compile Include="Models\Domain\Court.cs" />
+    <Compile Include="Models\Domain\CourtAddress.cs" />
     <Compile Include="Models\Domain\Example.cs" />
     <Compile Include="Models\Domain\LogAction.cs" />
     <Compile Include="Models\Domain\User.cs" />

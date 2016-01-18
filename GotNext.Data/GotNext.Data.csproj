@@ -104,6 +104,7 @@
     <Compile Include="Contexts\ApplicationDbContext.cs" />
     <Compile Include="Contexts\DataContext.cs" />
     <Compile Include="Contexts\IDataContext.cs" />
+    <Compile Include="Entities\CourtAddressEntity.cs" />
     <Compile Include="Entities\CourtEntity.cs" />
     <Compile Include="Entities\ExampleEntity.cs" />
     <Compile Include="Entities\LogActionEntity.cs" />
