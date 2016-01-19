@@ -68,6 +68,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="gulpfile.js" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
     <Content Include="app\example\index.html" />
@@ -77,6 +78,7 @@
     <Content Include="app\Web.config" />
     <Content Include="Scripts\angular-local-storage.js" />
     <Content Include="Scripts\angular-local-storage.min.js" />
+    <Content Include="package.json" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.0.js" />
     <Content Include="Scripts\jquery-2.2.0.min.js" />
