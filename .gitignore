@@ -76,3 +76,6 @@ _[Ss]cripts
 
 *.mdf
 *.ldf
+
+GotNext.Client/app/**/*.js
+GotNext.Client/app/**/*.map
