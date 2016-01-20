@@ -84,7 +84,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\API\CourtAPI.cs" />
+    <Compile Include="Models\API\CourtAddressApi.cs" />
+    <Compile Include="Models\API\CourtApi.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\API\ExampleAPI.cs" />
     <Compile Include="Models\Domain\Account\AddExternalLoginModel.cs" />

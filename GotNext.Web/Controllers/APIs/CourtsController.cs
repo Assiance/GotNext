@@ -9,6 +9,7 @@ using System.Web.Http.Description;
 using System.Web.Mvc;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
+using GotNext.Domain.Managers;
 using GotNext.Domain.Managers.Interfaces;
 using GotNext.Model.Models.API;
 using GotNext.Model.Models.Domain;
@@ -25,12 +26,12 @@ namespace GotNext.Web.Controllers.APIs
             _courtManager = courtManager;            
         }
 
-        public IQueryable<CourtAPi> GetCourts()
+        public IQueryable<CourtApi> GetCourts()
         {
-            return _courtManager.Courts.ProjectTo<CourtAPi>();
+            return _courtManager.Courts.ProjectTo<CourtApi>();
         }
 
-        [ResponseType(typeof(CourtAPi))]
+        [ResponseType(typeof(CourtApi))]
         public IHttpActionResult GetCourt(int id)
         {
             Court court = _courtManager.Courts.FirstOrDefault(x => x.Id == id);
@@ -39,7 +40,7 @@ namespace GotNext.Web.Controllers.APIs
                 return NotFound();
             }
 
-            var apiCourt = Mapper.Map<CourtAPi>(court);
+            var apiCourt = Mapper.Map<CourtApi>(court);
 
             return Ok(apiCourt);
         }
@@ -76,7 +77,7 @@ namespace GotNext.Web.Controllers.APIs
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        [ResponseType(typeof(CourtAPi))]
+        [ResponseType(typeof(CourtApi))]
         public IHttpActionResult PostCourt(CreateCourtRequest request)
         {
             if (!ModelState.IsValid)
@@ -85,13 +86,12 @@ namespace GotNext.Web.Controllers.APIs
             }
 
             var court = _courtManager.CreateCourt(Mapper.Map<Court>(request));
-
-            var apiCourt = Mapper.Map<CourtAPi>(court);
+            var apiCourt = Mapper.Map<CourtApi>(court);
 
             return CreatedAtRoute("DefaultApi", new { id = court.Id }, apiCourt);
         }
 
-        [ResponseType(typeof(CourtAPi))]
+        [ResponseType(typeof(CourtApi))]
         public IHttpActionResult DeleteCourt(int id)
         {
            Court court = _courtManager.Courts.FirstOrDefault(x => x.Id == id);

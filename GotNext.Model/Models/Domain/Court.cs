@@ -8,11 +8,11 @@ using GotNext.Model.Models.API;
 
 namespace GotNext.Model.Models.Domain
 {
-    public class Court : IMapFrom<CourtAPi>, IMapTo<CourtAPi>
+    public class Court : IMapFrom<CourtApi>, IMapTo<CourtApi>
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Address { get; set; }
+        public CourtAddress Address { get; set; }
         public decimal Price { get; set; }
         public bool IsOutDoor { get; set; }
         public string PaymentType { get; set; }
