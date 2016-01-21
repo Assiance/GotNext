@@ -1,0 +1,36 @@
+{
+  "name": "gotnext",
+  "description": "gotnext client",
+  "main": "index.html",
+  "authors": [
+    "Bradford Foxworth-Hill"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "gotnext"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-cookies": "~1.4.8",
+    "angular-sanitize": "~1.4.8",
+    "angular-local-storage": "~0.2.3",
+    "angular": "~1.4.8",
+    "angular-ui-router": "~0.2.15",
+    "angular-resource": "~1.4.8",
+    "bootstrap": "~3.3.6",
+    "jquery-validation": "~1.14.0",
+    "jquery": "~2.2.0",
+    "respond": "~1.4.2",
+    "modernizer": "~2.8.2",
+    "underscore": "~1.8.3"
+  }
+}
