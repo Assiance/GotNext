@@ -234,6 +234,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\SeedData.cs" />
+    <Compile Include="Controllers\APIs\CourtsController.cs" />
     <Compile Include="Infrastructure\ActionResults\StandardJsonResult.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -306,6 +307,8 @@
     <Compile Include="ViewModels\Account\ExternalLoginViewModel.cs" />
     <Compile Include="ViewModels\Account\ManageInfoViewModel.cs" />
     <Compile Include="ViewModels\Account\UserInfoViewModel.cs" />
+    <Compile Include="ViewModels\CourtResponse.cs" />
+    <Compile Include="ViewModels\CreateCourtRequest.cs" />
     <Compile Include="ViewModels\CreateExampleRequest.cs" />
     <Compile Include="ViewModels\ExampleResponse.cs" />
   </ItemGroup>
@@ -359,6 +362,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Scripts\" />
+    <Folder Include="Views\Courts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

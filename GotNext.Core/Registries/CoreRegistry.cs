@@ -10,7 +10,7 @@ namespace GotNext.Core.Registries
             Scan(scan =>
             {
                 scan.TheCallingAssembly();
-                scan.WithDefaultConventions();
+                scan.WithDefaultConventions(); 
 
             });
 
