@@ -11,10 +11,10 @@ using GotNext.Model.Models.Domain;
 
 namespace GotNext.Data.Entities
 {
-    public class PlayerEntity
+    public class PlayerEntity : IMapFrom<Player>, IMapTo<Player>
     {
         public int Id { get; set; }
-        public SportType SportType { get; set; }
+        public SportTypeEntity SportType { get; set; }
         public ApplicationUserEntity User { get; set; }
     }
 

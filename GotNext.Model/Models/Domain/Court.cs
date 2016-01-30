@@ -12,6 +12,7 @@ namespace GotNext.Model.Models.Domain
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public SportType SportType { get; set; }
         public CourtAddress Address { get; set; }
         public decimal Price { get; set; }
         public bool IsOutDoor { get; set; }

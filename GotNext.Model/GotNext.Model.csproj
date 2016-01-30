@@ -86,6 +86,8 @@
   <ItemGroup>
     <Compile Include="Models\API\CourtAddressApi.cs" />
     <Compile Include="Models\API\CourtApi.cs" />
+    <Compile Include="Models\API\PlayerApi.cs" />
+    <Compile Include="Models\API\SportTypeApi.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\API\ExampleAPI.cs" />
     <Compile Include="Models\Domain\Account\AddExternalLoginModel.cs" />
@@ -100,6 +102,7 @@
     <Compile Include="Models\Domain\Example.cs" />
     <Compile Include="Models\Domain\LogAction.cs" />
     <Compile Include="Models\Domain\Player.cs" />
+    <Compile Include="Models\Domain\SportType.cs" />
     <Compile Include="Models\Domain\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

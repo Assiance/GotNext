@@ -109,7 +109,7 @@
     <Compile Include="Entities\ExampleEntity.cs" />
     <Compile Include="Entities\LogActionEntity.cs" />
     <Compile Include="Entities\PlayerEntity.cs" />
-    <Compile Include="Entities\SportType.cs" />
+    <Compile Include="Entities\SportTypeEntity.cs" />
     <Compile Include="Entities\User\ApplicationUserEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registries\DataRegistry.cs" />
