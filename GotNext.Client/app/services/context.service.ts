@@ -14,7 +14,7 @@
         constructor(private $resource: ng.resource.IResourceService) { }
 
         examples(): ng.resource.IResourceClass<IExampleResource> {
-            return this.$resource('http://localhost:53213/api/examples/:exampleId'); //put server path in config
+            return this.$resource('http://localhost:53213/api/examples/:exampleId'); //todo: put server path in config
         }
     }
 

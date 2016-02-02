@@ -11,7 +11,14 @@
         /*
          *  3rd Party Modules
          */
+        'LocalStorageModule',
+        'ngAnimate',
+        'ngResource',
         'ui.router',
-        'LocalStorageModule'
+        'ui.bootstrap',
+        'angular-loading-bar',
+        'oc.lazyLoad',
+        //'nouislider',
+        'ngTable'
     ]);
 })();

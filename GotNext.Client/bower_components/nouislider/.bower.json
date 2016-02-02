@@ -32,6 +32,5 @@
   },
   "_source": "git://github.com/leongersen/noUiSlider.git",
   "_target": "~8.2.1",
-  "_originalSource": "nouislider",
-  "_direct": true
+  "_originalSource": "nouislider"
 }

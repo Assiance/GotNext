@@ -8,9 +8,13 @@
     config.$inject = ['$stateProvider'];
     function config($stateProvider: ng.ui.IStateProvider): void {
         $stateProvider
-            .state('home', {
-                url: '/',
-                templateUrl: 'app/dashboard/index.html'
+            .state('app.main.home', {
+                url: '',
+                views: {
+                    'content@app': {
+                        templateUrl: 'app/dashboard/index.html'
+                    }
+                }
             });
     }
 })();
