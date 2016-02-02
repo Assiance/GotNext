@@ -14,10 +14,9 @@ module app.login {
 
     class LoginController implements ILoginViewModel {
         static $inject: string[] = [
-            'currentUserService',
             'authService',
             '$location'];
-        constructor(private currentUserService: services.ICurrentUserService, private authService: services.IAuthService, private location: ng.ILocationService,
+        constructor(private authService: services.IAuthService, private location: ng.ILocationService,
             public registerEmail: string,
             public registerPassword: string,
             public registerConfirmPassword: string,

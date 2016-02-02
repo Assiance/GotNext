@@ -4,9 +4,10 @@
     angular.module('app', [
         'app.core',
         'app.domain',
+        'app.main',
         'app.layout',
         'app.services',
-        'app.widgets',
+        'app.components',
         'app.blocks',
         /*
      *  Feature Areas

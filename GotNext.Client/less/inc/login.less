@@ -1,0 +1,48 @@
+.login-content {
+    overflow: hidden;
+    height: 100%;
+}
+
+.lc-block {
+    background: #fff;
+    box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
+    border-radius: 2px;
+    height: 582px;
+    width: 400px;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+
+    &:not(.toggled) {
+        /*display: none;*/
+    }
+
+    .card-header {
+        width: 400px;
+        height: 260px;
+    }
+
+    .card-footer {
+        margin-top: 40px;
+    }
+
+    .card-body {
+        padding: 35px 35px 35px 35px;
+    }
+
+    .checkbox {
+        text-align: left;
+        margin-top: 0;
+    }
+
+    &.toggled {
+        z-index: 10;
+    }
+}
+ 
